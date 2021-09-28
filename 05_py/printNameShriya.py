@@ -1,8 +1,11 @@
 #Shriya Anand and Angela Zhang
 # SoftDev
 # Classwork- Class Names
-# POW WOW SUMMARY: When you call the printName() function, it asks you which period you want the student from. Originally, the code would then provide a random student from the list; after talking to my partner, however, we have changed it so that the user can input which number student they want from the list.
-
+# POW WOW SUMMARY:
+# When you call the printName() function, it asks you which period you want the student from.
+# After working with Angela, we incorporated a means of reading a text file for the names and storing it in a dictionary.
+# Questions:
+# Is it fine that we are reading the data from a text file into a list and then storing it in a dictionary? I am afraid it might defeat the purpose of the dictionary.
 import random
 
 def printName():
@@ -18,6 +21,7 @@ def printName():
         dictionary = {}
         dictionary["one"] = pd1
         dictionary["two"] = pd2
+        
         
     except: print ("One or more files are not valid")
 
