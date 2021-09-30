@@ -1,17 +1,23 @@
-#Shriya Anand
+#Cashew (Shriya Anand, Emma Buller, William Chen)
 #SoftDev
-#K06: Divine your Destiny- to read through a file and store the contents in a dictionary; then use weighted averages to randomly select one key
-# Approach was to read the file, split it on the line breaks, then go through a while loop for each line and split it on commas and store each line in the dictionary. The keys and values of the dictionary were then inputted as arguments to the random.choice() for weighted choices.
-#2021-09-28
+#K06 -- Stl/O: Divine your Destiny! (Parsing through files)
+#2021-09-29
+
+# We first started by looking at shriyas code for the 05 assignment and how she read a file
+# for that. We then pondered on how to split the lines in the file into a dictionary. We
+# then wondered how to choose a job randomly with weighting involved. We thought of ways
+# that included loops, but then William told us about and explained how to use the
+# random.choices() method. We decided to use that and used some dictionary methods to
+# split the keys and values into lists that can be inputted to the choices method.
+
 import csv
 import random
-dictionary ={}
-with open('occ.csv', newline='') as csvfile:
-     reader = csv.DictReader(csvfile)
-     for row in reader:
-         if (row['Job Class']!= 'Total' and row['Job Class']!= 'Job Class'):
-             print(row['Job Class'], row['Percentage'])
-             dictionary[row['Job Class']] = float(row['Percentage'])
-
-
-print(random.choices(list(dictionary.keys()), weights = dictionary.values(), k = 1))
+def selectJob():
+    dictionary ={}
+    with open('o.csv', newline='') as csvfile:
+         reader = csv.DictReader(csvfile)
+         for row in reader:
+             if (row['Job Class']!= 'Total' and row['Job Class']!= 'Job Class'):
+                 dictionary[row['Job Class']] = float(row['Percentage'])
+    job = random.choices(list(dictionary.keys()),list(dictionary.values()), k = 1)
+    return job[0]
