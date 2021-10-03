@@ -1,4 +1,4 @@
-Cashew (Shriya Anand and Emma Buller + Nectar/)
+Cashew (Shriya Anand and Emma Buller + Nectar/Humphrey)
 SoftDev
 K09 -- Simple Path to Greatness (Running first Flask App)
 2021-10-04
