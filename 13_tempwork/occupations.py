@@ -48,38 +48,24 @@ def read_occupations(filename: str) -> dict:
         for row in reader:
             job_class = row[0]
             percentage = row[1]
-            occupations[job_class] = float(percentage)
+            link = row[2]
+
+            occupations[job_class] = (float(percentage), link) # Creates tuple of the percentage and links
 
     # We mark everything not in the occupations list as "Other".
-    total_percentage = occupations["Total"]
-    occupations["Other"] = round(100 - total_percentage, 1) # Rounds to 1 decimal point
+    total_percentage = occupations["Total"][0]
+    occupations["Other"] = (round(100 - total_percentage, 1), occupations['Total'][1]) # Rounds to 1 decimal point
     del occupations["Total"]
 
     return occupations
 
 
 def choose_from_dict(occupations: dict) -> str:
-    """Picks an occupation randomly using the percentage weights in the given
-    occupations dictionary."""
+    """
+    Picks an occupation randomly using the percentage weights in the given
+    occupations dictionary.
+    """
 
     job_classes = list(occupations.keys())
-    percentages = list(occupations.values())
-
-    choice = random.choices(job_classes, weights=percentages)[0]
-    return choice
-
-
-def random_occupation(filename: str) -> str:
-    """Returns a random occupation based on the job classes and percentage
-    weights provided in the given CSV file."""
-
-    occupations = read_occupations(filename)
-    return choose_from_dict(occupations)
-
-
-def main():
-    print(random_occupation("occupations.csv"))
-
-
-if __name__ == "__main__":
-    main()
+    tuples = list(occupations.values())
+    percentages = [t[0] for t in tuples] # Gets only the first element of each tuple in the list
