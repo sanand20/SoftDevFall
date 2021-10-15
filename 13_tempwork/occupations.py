@@ -69,6 +69,7 @@ def choose_from_dict(occupations: dict) -> str:
     job_classes = list(occupations.keys())
     tuples = list(occupations.values())
     percentages = [t[0] for t in tuples] # Gets only the first element of each tuple in the list
+<<<<<<< HEAD
 
 
     choice = random.choices(job_classes, weights=percentages)[0]
@@ -92,3 +93,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+=======
+>>>>>>> 36281f9f7ced1b9269f0244e6cfe78129a39a0e3
