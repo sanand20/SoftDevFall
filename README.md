@@ -17,23 +17,14 @@ Here shall be the official record of events transpiring in the 2021-2022 season 
 
 #### Notes
 * There are 3 ways to add CSS to an HTML file (Inline, Internal, and External)
-* Inline CSS is used to apply a unique style to single elements
-  * <p style="color:red;">This is a paragraph.</p>
-* Internal CSS is used 
-  * <style>
-body {
-  background-color: linen;
-}
+* Inline CSS is used to apply a unique style to single elements. It works by adding the "style" attribute specifically next to the relevant element.
+* Internal CSS is used for larger sections (like head/body). It works by adding specific design choices to the <style> element inside the respective section of the page (eg: head).
+* External CSS is used to change the entire website using a single file. It works by linking the CSS file in the HTML file and having the CSS file control the style of the entire website.
 
-h1 {
-  color: maroon;
-  margin-left: 40px;
-}
-</style>
-
+#### Homework
+https://www.stuycs.org/softdev-mykolyk/1970/01/02/k18.html
+* Apply styling to index.html to mimic target_styling.png with 3 different approaches (Inline, Internal, and External CSS)
+ 
 #### Next LCT
-* John von Neumann (jvn@stuy.edu)
-
-Note the horizontal line below. Use it effectively.
-
----
+* Alejandro Alonso (aalonso20@stuy.edu)
+----------------------------------------------------
