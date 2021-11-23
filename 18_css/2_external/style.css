@@ -1,0 +1,36 @@
+body {
+
+  background-color: #767676;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  border: 10px solid #666666;
+  background-color: #C0C0C0;
+  color: white;
+}
+#diva {
+  float: left;
+  width: 20%;
+  padding: 0 50px 7px 10px;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#divb {
+
+  float: left;
+  width: 75%;
+}
+#divc {
+  background-color: #565656;
+  float: left;
+  width: 100%;
+  text-align: right;
+  font-size: 20px;
+  color: #757575;
+  }
