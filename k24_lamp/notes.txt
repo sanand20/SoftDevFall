@@ -1,0 +1,7 @@
+Shriya Anand
+SoftDev Fall
+K24: Cold LAMPin w Flav
+2022-1-13
+
+
+ssh root@"ip"
