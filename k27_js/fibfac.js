@@ -1,4 +1,14 @@
+Team Mechanical Pencils :: Shriya Anand, Michael Borczuk
+SoftDev pd1
+K27 -- Basic functions in JavaScript
+2022-02-04
 
+var fact = function(n){
+	if (n <= 1){
+		return 1;
+	}
+	return (fact(n-1)*n);
+};
 
 var fib = function(n) {
 	if (n == 0){

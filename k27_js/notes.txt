@@ -1,18 +1,18 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-SoftDev pd0
+Team Mechanical Pencils :: Shriya Anand, Michael Borczuk
+SoftDev pd1
 K27 -- Basic functions in JavaScript
-2022-02-03r
+2022-02-04
+
 
 DISCO
 -----------------------------------------------------------------
-* Ooooh, ___
-* Aaah-haa!  ____...
+* Very interesting, lovely to see the dev console run my code.
+* Makes me more proud than my children
+* Semicolons are important
 =================================================================
 
 QCC
 -----------------------------------------------------------------
-* Why...?
-* Huh?
-* Whuh now?
+* Why so many semicolons?
 =================================================================
 
