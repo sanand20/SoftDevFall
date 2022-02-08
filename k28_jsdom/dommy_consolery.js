@@ -28,7 +28,7 @@
 //send diagnostic output to console
 //(Ctrl-Shift-J in Firefox to reveal console)
 console.log("AYO");
-
+import Math;
 var i = "hello";
 var j = 20;
 
@@ -89,3 +89,35 @@ var stripe = function() {
 // FIB
 // FAC
 // GCD
+var fact = function(n){
+	if (n <= 1){
+		return 1;
+	}
+	return (fact(n-1)*n);
+};
+
+var fib = function(n) {
+	if (n == 0){
+		return 0;
+	}
+	if (n <= 2){
+		return 1;
+	}
+	return (fib(n - 1) + fib(n - 2));
+};
+
+
+var gcd = function(a, b){
+	var max = 1;
+	if (a>b){
+		max = Math.sqrt(a);
+	}
+	else {max = Math.sqrt(b);}
+	var ans = 1;
+	for (let i = 1; i <= max; i++){
+		if (a%i == 0 && b%i == 0){
+			ans = i;
+		}
+	}
+	return ans;
+};
