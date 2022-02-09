@@ -1,36 +1,16 @@
-/*
-   your PPTASK:
-
-   Test drive each bit of code in this file,
-    and insert comments galore, indicating anything
-     you discover,
-    	have questions about,
-    		or otherwise deem notable.
-
-    		Write with your future self or teammates in mind.
-
-    		If you find yourself falling out of flow mode, consult
-    		other teams
-    		MDN
-
-   A few comments have been pre-filled for you...
-
-   (delete this block comment once you are done)
-*/
-
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
+// Team Mechanical Pencils :: Shriya Anand, Michael Borczuk
+// SoftDev pd1
 // K28 -- Getting more comfortable with the dev console and the DOM
-// 2022-02-08t
-// --------------------------------------------------
-
+// 2022-02-08
+// time spent: 0.7 hours
 
 //send diagnostic output to console
 //(Ctrl-Shift-J in Firefox to reveal console)
 console.log("AYO");
-import Math;
+
 var i = "hello";
 var j = 20;
+
 
 
 //assign an anonymous fxn to a var
@@ -110,9 +90,11 @@ var fib = function(n) {
 var gcd = function(a, b){
 	var max = 1;
 	if (a>b){
-		max = Math.sqrt(a);
-	}
-	else {max = Math.sqrt(b);}
+		max = a;
+  }
+	else {
+    max = b
+  }
 	var ans = 1;
 	for (let i = 1; i <= max; i++){
 		if (a%i == 0 && b%i == 0){
@@ -121,3 +103,11 @@ var gcd = function(a, b){
 	}
 	return ans;
 };
+
+// assign function call results to text in the HTML page
+var factResult = document.getElementById("fact");
+factResult.innerHTML = "10! = " + fact(10);
+var fibResult = document.getElementById("fib");
+fibResult.innerHTML = "The 3rd element of the fibonacci sequence is " + fib(3);
+var gcdResult = document.getElementById("gcd");
+gcdResult.innerHTML = "The greatest common factor of 40 and 24 is " + gcd(40, 24);
