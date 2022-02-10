@@ -88,15 +88,15 @@ var fib = function(n) {
 
 
 var gcd = function(a, b){
-	var max = 1;
-	if (a>b){
-		max = a;
+	var min = 1;
+	if (a<b){
+		min = a;
   }
 	else {
-    max = b
+    min = b
   }
 	var ans = 1;
-	for (let i = 1; i <= max; i++){
+	for (let i = 1; i <= min; i++){
 		if (a%i == 0 && b%i == 0){
 			ans = i;
 		}
@@ -105,9 +105,15 @@ var gcd = function(a, b){
 };
 
 // assign function call results to text in the HTML page
-var factResult = document.getElementById("fact");
-factResult.innerHTML = "10! = " + fact(10);
-var fibResult = document.getElementById("fib");
-fibResult.innerHTML = "The 3rd element of the fibonacci sequence is " + fib(3);
-var gcdResult = document.getElementById("gcd");
-gcdResult.innerHTML = "The greatest common factor of 40 and 24 is " + gcd(40, 24);
+
+var dasbut = document.getElementById("b");
+dasbut.addEventListener('click', disp);
+
+function disp(){
+  var factResult = document.getElementById("fact");
+  factResult.innerHTML = "10! = " + fact(10);
+  var fibResult = document.getElementById("fib");
+  fibResult.innerHTML = "The 3rd element of the fibonacci sequence is " + fib(3);
+  var gcdResult = document.getElementById("gcd");
+  gcdResult.innerHTML = "The greatest common factor of 40 and 24 is " + gcd(40, 24);
+};
